@@ -5,7 +5,7 @@
 // var jsDataTypes = ["bool", "string", "object", "integer", "function", "undefined"]
 // var jsDataTypes = ["boolean", "string", "object", "int", "function"]
 // var jsDataTypes = ["bool", "string", "object", "integer", "function"]
-// var jsDataTypes = ["boolean", "string", "object", "number", "function", "undefined"]
+var jsDataTypes = ["boolean", "string", "object", "number", "function", "undefined"]
 
 
 ///////////////////Problem 2//////////////////
@@ -14,28 +14,30 @@
 //chocolate!
 
 var iLikeChocolate = null
-
+iLikeChocolate = true;
 
 ///////////////////Problem 3//////////////////
 //Create a string, and assign it to a variable
 //called myString
 
 //Code here
-
+let myString = 'this is a string';
 
 ///////////////////Problem 4//////////////////
 //Create an integer, and assign it to a variable
 //called myInt
 
 //Code here
-
+let myInt = 7;
 
 ///////////////////Problem 5//////////////////
 //Create a function called myFunction that returns
 //the string "I am a function!"
 
 //Code here
-
+function myFunction() {
+    return "I am a function!";
+}
 
 ///////////////////Problem 6//////////////////
 //Create an object called myObject that has a 
@@ -44,7 +46,13 @@ var iLikeChocolate = null
 //property.
 
 //Code here
-
+let myObject = {
+    name: 'Aaron',
+    team: 'DA',
+    whatTeam: function() {
+        return myObject.team;
+    }
+}
 
 ///////////////////Problem 7//////////////////
 //Create an array called myArray that contains:
@@ -52,7 +60,7 @@ var iLikeChocolate = null
 //an array literal that contains 4, 5
 
 //Code here
-
+let myArray = [1,"two", {three:3},[4,5] ];
 
 ///////////////////Problem 8//////////////////
 //Make a function called whatAmI that takes in one 
@@ -60,7 +68,21 @@ var iLikeChocolate = null
 //return the data type of the mystery parameter.
 
 //Code here
-
+function whatAmI(mystery) {
+    if(typeof mystery === "boolean") {
+        return "bolean";
+    } else if (typeof mystery === "number") {
+        return "number";
+    } else if (typeof mystery === "string") {
+        return "string";
+    } else if (typeof mystery === "object") {
+        return "object";
+    } else if (typeof mystery === "undefined") {
+        return "undefined";
+    } else if (typeof myster === "function") {
+        return "function";
+    }
+}
 
 ///////////////////Problem 9//////////////////
 //Create a variable called theVoid. Make it null.
