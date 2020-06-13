@@ -10,8 +10,10 @@
 
   function addNumbers(value){
       var myNumbers = []
-      //Code here
-      
+      for (let i = 0; i < value; i++) {
+        myNumbers.push(i);
+      }
+      return myNumbers;
   }
 
 
@@ -19,13 +21,16 @@
 
 //Finish the function backwardsGreeting. backwardsGreeting should loop
 //through the array parameter from end to start, concatinating "Hello, "
-// with each element, and pushing the resulting sting into the greetings
+// with each element, and pushing the resulting string into the greetings
 //array. Then return the greetings array.
 
   function backwardsGreeting(arr) {
     let greetings = [];
-    //Code here
-  
+    for (let i = arr.length -1; i >= 0; i--) {
+      arr[i] = `Hello, ${arr[i]}`;
+      greetings.push(arr[i]);
+    }
+    return greetings;
   }
 
 
@@ -37,6 +42,8 @@
 //the variable i for your for loop
 
   function leapFrog(arr) {
-    //Code here
-
+    for (let i = 0; i < arr.length; i+=2) {
+      arr[i] += ' frog';
+    }
+    return arr;
   }
