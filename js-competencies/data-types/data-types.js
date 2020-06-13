@@ -88,7 +88,7 @@ function whatAmI(mystery) {
 //Create a variable called theVoid. Make it null.
 
 //Code here
-
+let theVoid = null;
 
 ///////////////////Problem 10//////////////////
 //Create a function called undefiner that takes in 
@@ -96,7 +96,10 @@ function whatAmI(mystery) {
 //to undefined. undefiner should return the array.
 
 //Code here
-
+function undefiner(arr) {
+    arr.splice(1,1,undefined)
+    return arr;
+}
 
 ///////////////////Problem 11//////////////////
 //Create a function called nananan that takes in 
@@ -105,13 +108,22 @@ function whatAmI(mystery) {
 //the parameter divided by 2.
 
 //Code here
+function nananan(arg){
+    let answer = arg / 2;
+    if (isNaN(answer)) {
+        return "FLYING NOCTURNAL MAMMAL MAN!";
+    }
+    else {
+        return answer;
+    }
+}
 
 
 //Now, call nananan with the value NaN, and store the 
 //result of the function call in a variable called "na".
 
 //Code here
-
+let na = nananan(NaN);
 
 ///////////////////Problem 12//////////////////
 //Create a function called arrayChecker that takes 
@@ -119,7 +131,13 @@ function whatAmI(mystery) {
 //if the parameter is an array, and false otherwise.
 
 //Code here
-
+function arrayChecker(arg) {
+    if (Array.isArray(arg) === true) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 ///////////////////Problem 13//////////////////
 //Create a function called numFromString that takes 
@@ -128,7 +146,9 @@ function whatAmI(mystery) {
 //Return that base 10 number.
 
 //Code here
-
+function numFromString(str) {
+    return parseInt(str);
+}
 
 ///////////////////Problem 14//////////////////
 //Create a function called makeItAString that takes 
@@ -137,33 +157,35 @@ function whatAmI(mystery) {
 //Return that string.
 
 //Code here
-
+function makeItAString(arg) {
+    return arg.toString();
+}
 
 ///////////////////Problem 15//////////////////
 //Uncomment the correct answers below
 
 //What will 100 || 0 be evaluted to?
-// var answer1 = 100
+var answer1 = 100
 // var answer1 = 0
 
 //What will "Hello" && "Goodbye" be evaluted to?
 // var answer2 = "Hello"
-// var answer2 = "Goodbye"
+var answer2 = "Goodbye"
 
 //What will 14 + "" be evaluted to?
-// var answer3 = "14"
+var answer3 = "14"
 // var answer3 = 14
 
 //What will "14" - 10 be evaluted to?
 // var answer4 = "14"
 // var answer4 = "1410"
-// var answer4 = 4
+var answer4 = 4
 // var answer4 = 1410
 
 //What will ["anne", "bob"] + ["charlie"] be evaluted to?
 // var answer5 = ["anne", "bob", "charlie"]
 // var answer5 = "annebobcharlie"
-// var answer5 = "anne,bobcharlie"
+var answer5 = "anne,bobcharlie"
 // var answer5 = "anne,bob,charlie"
 
 
@@ -183,25 +205,25 @@ myCopiedStr += " What a beautiful day!"
 
 //What is the value of myArr?
 // var valMyArr = [1, 2, 3, 4]
-// var valMyArr = [1, 25, 3, 4]
+var valMyArr = [1, 25, 3, 4]
 
 //What is the value of myStr?
-// var valMyStr = "Hello, world!"
+var valMyStr = "Hello, world!"
 // var valMyStr = "Hello, world! What a beautiful day!"
 
 //What is the value of myCopiedArr?
 // var valMyCopiedArr = [1, 2, 3, 4]
-// var valMyCopiedArr = [1, 25, 3, 4]
+var valMyCopiedArr = [1, 25, 3, 4]
 
 //What is the value of myCopiedStr?
 // var valMyCopiedStr = "Hello, world!"
-// var valMyCopiedStr = "Hello, world! What a beautiful day!"
+var valMyCopiedStr = "Hello, world! What a beautiful day!"
 
 //Are arrays copied by reference, or by value?
-// var arraysCopiedBy = "reference"
+var arraysCopiedBy = "reference"
 // var arraysCopiedBy = "value"
 
 //Are string copied by reference, or by value?
 // var stringsCopiedBy = "reference"
-// var stringsCopiedBy = "value"
+var stringsCopiedBy = "value"
 
