@@ -4,11 +4,12 @@
 // What is context? Uncomment the best answer.
 
 // var context = "The file which is the execution context of the running code, represented by 'context' keyword."
-// var context = "The object which is the execution context of the running code, represented by 'this' keyword.";
+var context = "The object which is the execution context of the running code, represented by 'this' keyword.";
 // var context = "The function which is the execution context of the running code, represented by 'this' keyword."
 // var context = "The browser window, represented by 'context' keyword."
 // var context = "The html page where the script is running, represented by 'this' keyword."
 
+// resource- https://towardsdatascience.com/javascript-context-this-keyword-9a78a19d5786
 
 // /////////////////Problem 2//////////////////
 // Based on the following code, what is 'this' in the function
@@ -23,7 +24,7 @@ function rubberDucks() {
 rubberDucks();
 
 // var contextRubberDucks = "index.html"
-// var contextRubberDucks = 'window';
+var contextRubberDucks = 'window';
 // var contextRubberDucks = "Object"
 // var contextRubberDucks = "rubberDucks"
 // var contextRubberDucks = "context.js"
@@ -46,7 +47,7 @@ var dcMetro = {
 // var contextBreakMetro = "index.html"
 // var contextBreakMetro = "window"
 // var contextBreakMetro = "Object"
-// var contextBreakMetro = 'dcMetro';
+var contextBreakMetro = 'dcMetro';
 // var contextBreakMetro = "context.js"
 
 
@@ -64,25 +65,25 @@ var ascent = {
 };
 
 // CODE HERE
-
+let areWeThereYet = ascent.remainingElevation;
 
 // Now, invoke areWeThereYet and save the result to
 // a variable named moreToGo.
 
 // CODE HERE
-
+let moreToGo = areWeThereYet();
 
 // Now, uncomment the best answers:
 
 // What will the value of moreToGo be?
 // var valMoreToGo = 1500
 // var valMoreToGo = NaN;
-// var valMoreToGo = undefined
+var valMoreToGo = undefined
 // var valMoreToGo = -1500
 
 // What was the context of areWeThereYet when you ran it?
 // var contextAreWeThereYet = "ascent"
-// var contextAreWeThereYet = 'window';
+var contextAreWeThereYet = 'window';
 // var contextAreWeThereYet = "Object"
 // var contextAreWeThereYet = "context.js"
 
@@ -97,18 +98,20 @@ var descent = {
   height: 25000,
   destination: 3500,
   remainingElevation(){
-    return this.destination - this.height
+    return descent.destination - descent.height
   }
 };
 
 // CODE HERE
+let almostThere = descent.remainingElevation;
+
 
 
 // Now, invoke almostThere and save the result to
 // a variable named finalDescent.
 
 // CODE HERE
-
+let finalDescent = almostThere();
 
 // Now, uncomment the best answers:
 
@@ -116,10 +119,10 @@ var descent = {
 // var valFinalDescent = 21500
 // var valFinalDescent = NaN
 // var valFinalDescent = undefined
-// var valFinalDescent = -21500;
+var valFinalDescent = -21500;
 
 // What was the context of almostThere when you ran it?
-// var contextAlmostThere = 'descent';
+var contextAlmostThere = 'descent';
 // var contextAlmostThere = "window"
 // var contextAlmostThere = "Object"
 // var contextAlmostThere = "context.js"
